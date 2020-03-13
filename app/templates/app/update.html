@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Update Employee{% endblock title %}
+{% block body %}
+<div class="container">
+    <center>
+
+        <form action="" method="post" style="margin-top: 200px;">
+            {% csrf_token %}
+                
+            <div class="row">
+                <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Name" name="name" value="{{employee.name}}">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Qualification" name="qua" value="{{employee.qualification}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Contact" name="cont" value="{{employee.contact}}">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Emali" name="email" value="{{employee.email}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <center>
+                    <input type="submit" value="Submit" class="btn btn-info">
+                </center>
+            </div>
+        </div>
+    </form>
+</center>
+</div>
+
+{% endblock body %}

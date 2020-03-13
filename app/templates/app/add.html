@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Add Employee{% endblock title %}
+{% block style %}
+<style>
+    .row{
+        margin-top: 20px;
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<div class="container">
+    <center>
+
+        <form action="{% url 'add' %}" method="post" style="margin-top: 200px;">
+            {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Name" name="name">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Qualification" name="qua">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Contact" name="cont">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Emali" name="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <center>
+                    <input type="submit" value="Submit" class="btn btn-info">
+                </center>
+            </div>
+        </div>
+    </form>
+</center>
+</div>
+{% endblock body %}
